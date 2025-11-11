@@ -1,0 +1,70 @@
+\input{./src/main.sty}
+% Additional SI unit for Fahrenheit
+\DeclareSIUnit\fahrenheit{\degree F}
+
+\begin{document}
+
+% Include title page
+\input{./src/titlepage.tex}
+
+\pagebreak
+
+\section*{9.1.1.}
+
+Show, starting from the definition of the operators for the Cartesian
+components of the angular momentum, that $\hat L \times \hat L =
+i\hbar \hat L$ . [Note that you should also explicitly derive any
+  commutation relations that you need between the operators of the
+  angular momentum components, starting from the known commutation
+properties of position and (linear) momentum operators.]
+
+\pagebreak
+
+\section*{9.2.1.}
+
+Show explicitly in Cartesian $(x, y, z)$ coordinates that the
+$\nabla^2$ and $\hat L_z$
+operators commute, i.e.,
+
+\begin{equation*}
+  [ \nabla^2, \hat L_z ] = 0
+\end{equation*}
+
+\pagebreak
+
+\section*{10.5.1.}
+
+Consider an electron in a thin cylindrical shell potential. This
+potential is zero within the
+cylindrical shell and may be presumed infinite everywhere else. The
+shell has inner radius $r_o$ and
+thickness $L_r$, where $r_o \gg L_r$. The cylindrical shell may be
+presumed to be infinite along its
+cylindrical (z) axis.
+
+\begin{enumerate}
+  \item Show that the energy eigenfunctions (i.e., solutions of the
+      time-independent Schr\"odingera
+    equation) are, approximately,
+
+    \begin{equation*}
+      \psi(r,\phi,z) \propto \sin\frac{n\pi(r -
+      r_o)}{L_r}\exp(im\phi)\exp(ik_zz)
+    \end{equation*}
+
+  \item State what the restrictions are on the values of $n$, $m$,
+    and $k$ (e.g., are they real, integer, limited in
+    their range?)
+  \item Give an approximate expression for the corresponding energy eigenvalues.
+
+    Note: in cylindrical polar coordinates
+
+    \begin{equation*}
+      \nabla^2 = \frac{1}{r}\frac{\delta}{\delta
+      r}\left(r\frac{\delta}{\delta r}\right) +
+      \frac{1}{r^2}\frac{\delta^2}{\delta\phi^2} + \frac{\delta^2}{\delta z^2}
+    \end{equation*}
+
+\end{enumerate}
+
+\end{document}
