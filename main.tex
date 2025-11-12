@@ -120,6 +120,82 @@ operators commute, i.e.,
   [ \nabla^2, \hat L_z ] = 0
 \end{equation*}
 
+\boxedanswer{
+  \begin{align*}
+    \nabla^2 &= \frac{\delta^2}{\delta x^2} + \frac{\delta^2}{\delta
+    y^2} + \frac{\delta^2}{\delta z^2} \\
+    \hat L_z &= \hat x\hat p_y - \hat y\hat p_x =
+    i\hbar\left(y\frac{\delta}{\delta x}-x\frac{\delta}{\delta y}\right) \\
+    [\nabla^2, \hat L_z] &= \nabla^2L_z - L_z\nabla^2 \\
+    [\nabla^2, \hat L_z] &=
+    \left(
+      \frac{\delta^2}{\delta x^2}
+      + \frac{\delta^2}{\delta y^2}
+      + \frac{\delta^2}{\delta z^2}
+    \right)
+    i\hbar\left(y\frac{\delta}{\delta x}-x\frac{\delta}{\delta y}\right) -
+    i\hbar\left(y\frac{\delta}{\delta x}-x\frac{\delta}{\delta y}\right)
+    \left(
+      \frac{\delta^2}{\delta x^2}
+      + \frac{\delta^2}{\delta y^2}
+      + \frac{\delta^2}{\delta z^2}
+    \right) \\
+    [\nabla^2, \hat L_z] &= i\hbar
+    \Biggl[
+      \left(
+        \frac{\delta^2}{\delta x^2}y \frac{\delta}{\delta x}
+        -\frac{\delta^2}{\delta x^2}x \frac{\delta}{\delta y}
+        + \frac{\delta^2}{\delta y^2}y \frac{\delta}{\delta x}
+        - \frac{\delta^2}{\delta y^2}x \frac{\delta}{\delta y}
+        + \frac{\delta^2}{\delta z^2}y \frac{\delta}{\delta x}
+        - \frac{\delta^2}{\delta z^2}x \frac{\delta}{\delta y}
+      \right) -  \\
+      & \hspace{1 cm}
+      \left(
+        y \frac{\delta}{\delta x}\frac{\delta^2}{\delta x^2}
+        - x \frac{\delta}{\delta y}\frac{\delta^2}{\delta x^2}
+        + y \frac{\delta}{\delta x}\frac{\delta^2}{\delta y^2}
+        - x \frac{\delta}{\delta y}\frac{\delta^2}{\delta y^2}
+        + y \frac{\delta}{\delta x}\frac{\delta^2}{\delta z^2}
+        - x \frac{\delta}{\delta y}\frac{\delta^2}{\delta z^2}
+      \right)
+    \Biggr] \\
+    [\nabla^2, \hat L_z] &= i\hbar
+    \Biggl[
+      \left(
+        \cancel{y\frac{\delta^3}{\delta x^3}}
+        -\frac{\delta^2}{\delta x^2}x \frac{\delta}{\delta y}
+        + \frac{\delta^2}{\delta y^2}y \frac{\delta}{\delta x}
+        - \cancel{x\frac{\delta^3}{\delta y^3}}
+        + \cancel{y\frac{\delta^3}{\delta xz^2}}
+        - \cancel{x\frac{\delta^3}{\delta yz^2}}
+      \right) -  \\
+      & \hspace{1 cm}
+      \left(
+        \cancel{y \frac{\delta^3}{\delta x^3}}
+        - x \frac{\delta^3}{\delta x^2y}
+        + y \frac{\delta^3}{\delta xy^2}
+        - \cancel{x \frac{\delta^3}{\delta y^3}}
+        + \cancel{y \frac{\delta^3}{\delta xz^2}}
+        - \cancel{x \frac{\delta^3}{\delta yz^2}}
+      \right)
+    \Biggr] \\
+    [\nabla^2, \hat L_z] &= i\hbar
+    \Biggl[
+      \cancel{2\frac{\delta^2}{\delta xy}} +
+      \cancel{y \frac{\delta^3}{\delta xy^2}}
+      -
+      \cancel{2\frac{\delta^2}{\delta xy}} -
+      \cancel{x \frac{\delta^3}{\delta x^2y}}
+      -
+      \cancel{y \frac{\delta^3}{\delta xy^2}}
+      +
+      \cancel{x \frac{\delta^3}{\delta x^2y}}
+    \Biggr] \\
+    \Aboxed{[\nabla^2, \hat L_z] &= 0}
+  \end{align*}
+}
+
 \pagebreak
 
 \section*{10.5.1.}
@@ -134,7 +210,7 @@ cylindrical (z) axis.
 
 \begin{enumerate}
   \item Show that the energy eigenfunctions (i.e., solutions of the
-      time-independent Schr\"odingera
+      time-independent Schr\"odinger
     equation) are, approximately,
 
     \begin{equation*}
