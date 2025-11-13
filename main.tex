@@ -231,6 +231,41 @@ cylindrical (z) axis.
       \frac{1}{r^2}\frac{\delta^2}{\delta\phi^2} + \frac{\delta^2}{\delta z^2}
     \end{equation*}
 
+    \boxedanswer{
+      Propose the wavefunction of form:
+
+      \begin{equation*}
+        \Psi(r,\phi,z) = R(r)\Phi(\phi)Z(z)
+      \end{equation*}
+
+      The time-independent Schr\"odinger equation:
+
+      \begin{equation*}
+        E\Psi = -\frac{\hbar^2}{2m_e}\nabla^2 \Psi
+      \end{equation*}
+
+      The Laplacian in cylindrical coordinates is:
+
+      \begin{align*}
+        \nabla^2 \Psi &= \frac{Z(z)\Phi(\phi)}{r}\frac{\delta}{\delta
+        r}\left(r\frac{\delta R(r)}{\delta r}\right)
+        + \frac{R(r)Z(z)}{r^2}\frac{\delta^2\Phi(\phi)}{\delta\phi^2}
+        + R(r)\Phi(\phi)\frac{\delta^2Z(z)}{\delta z^2} \\
+        E\Psi &=
+        -\frac{\hbar^2}{2m_e}\frac{Z(z)\Phi(\phi)}{r}\frac{\delta}{\delta
+        r}\left(r\frac{\delta R(r)}{\delta r}\right)
+        + \frac{R(r)Z(z)}{r^2}\frac{\delta^2\Phi(\phi)}{\delta\phi^2}
+        + R(r)\Phi(\phi)\frac{\delta^2Z(z)}{\delta z^2} \\
+        \frac{2m_eE}{\hbar^2} &=
+        \frac{1}{rR(r)}
+        \frac{\delta}{\delta r}
+        \left(r\frac{\delta R(r)}{\delta r}\right)
+        + \frac{1}{r^2\Phi(r)}\frac{\delta^2\Phi(\phi)}{\delta\phi^2}
+        + \frac{1}{Z(z)}\frac{\delta^2Z(z)}{\delta z^2} \\
+      \end{align*}
+
+    }
+
 \end{enumerate}
 
 \end{document}
