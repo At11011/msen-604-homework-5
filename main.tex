@@ -218,19 +218,6 @@ cylindrical (z) axis.
       r_o)}{L_r}\exp(im\phi)\exp(ik_zz)
     \end{equation*}
 
-  \item State what the restrictions are on the values of $n$, $m$,
-    and $k$ (e.g., are they real, integer, limited in
-    their range?)
-  \item Give an approximate expression for the corresponding energy eigenvalues.
-
-    Note: in cylindrical polar coordinates
-
-    \begin{equation*}
-      \nabla^2 = \frac{1}{r}\frac{\delta}{\delta
-      r}\left(r\frac{\delta}{\delta r}\right) +
-      \frac{1}{r^2}\frac{\delta^2}{\delta\phi^2} + \frac{\delta^2}{\delta z^2}
-    \end{equation*}
-
     \boxedanswer{
       Propose the wavefunction of form:
 
@@ -262,8 +249,120 @@ cylindrical (z) axis.
         \left(r\frac{\delta R(r)}{\delta r}\right)
         + \frac{1}{r^2\Phi(r)}\frac{\delta^2\Phi(\phi)}{\delta\phi^2}
         + \frac{1}{Z(z)}\frac{\delta^2Z(z)}{\delta z^2} \\
+        \frac{1}{\Phi}\frac{d^2}{d\phi} &= -m_\phi^2 \\
+        \Phi(\phi) &= e^{im_\phi \phi} \\
+        m_\phi &\in \mathbb{Z} \text{ (Note: $\Phi(\phi + 2\pi) =
+        \Phi(\phi)$)} \\
+        \frac{1}{Z}\frac{d^2Z}{dz^2} &= -k_z^2 \\
+        Z(z) &= e^{ik_zz} \\
+        \frac{1}{r}\frac{d}{dr}\left(r\frac{dR}{dr}\right) -
+        0 &= \frac{m_\phi^2}{r^2}R + (k_r^2)R \\
+        k_r^2 &\equiv \frac{2m_eE}{\hbar^2} - k_z^2
       \end{align*}
 
+    }
+
+    \pagebreak
+
+    \boxedanswer{
+      Note that the above is a Bessel-type equation. Apply the
+      thin-shell approximation:
+
+      \begin{align*}
+        r_0 &\gg L_r \\
+        \frac{1}{r}\frac{d}{dr}\left(r\frac{dR}{dr}\right) &\approx
+        \frac{1}{r_0}\frac{d}{dr}\left(r_0\frac{dR}{dr}\right) \\
+        \frac{1}{r}\frac{d}{dr}\left(r\frac{dR}{dr}\right) &=
+        \frac{d^2R}{dr^2} \\
+        \frac{d^2R}{dr^2} + \left[ k_r^2 - \frac{m_\phi^2}{r_0^2}
+        \right]R &= 0 \\
+        k_\perp^2 &\equiv k_r^2 - \frac{m_\phi^2}{r_0^2} \\
+      \end{align*}
+
+      The general solution for the equation
+
+      \begin{equation*}
+        \frac{d^2R}{dr^2} + k_\perp^2R = 0
+      \end{equation*}
+
+      can be shown to be
+
+      \begin{equation*}
+        R(r) \propto \sin(k_\perp(r - r_0))
+      \end{equation*}
+
+      At the outer shell boundary $r = r_0 + L_r$:
+
+      \begin{align*}
+        R(r) &= 0 = \sin(\overbrace{k_\perp(r_0 + L_r - r_0)}^{n\pi}) \\
+        k_\perp &= \frac{n\pi}{L_r} \\
+        R(r) &\propto \sin\left(\frac{n\pi(r - r_0)}{L_r} \right) \\
+      \end{align*}
+
+      Combining the parts:
+
+      \begin{align*}
+        \Aboxed{\psi(r,\phi,z) \perp \sin\frac{n\pi(r -
+        r_0)}{L_r}\exp(im\phi)\exp(ik_zz)}
+      \end{align*}
+
+    }
+
+  \item State what the restrictions are on the values of $n$, $m$,
+    and $k$ (e.g., are they real, integer, limited in
+    their range?)
+
+    \boxedanswer{
+      \begin{align*}
+        n &= 1,2,3,\dots \\
+        m &\equiv m_\phi \in \mathbb{Z} \\
+        k_z &\in \mathbb{R}
+      \end{align*}
+
+      $n$ does not give unique solutions for $n = -n$, so it is
+      restricted to positive non-zero integers.
+
+      $m$ must be an integer to ensure that the value of the function
+      does not change
+      along the azimuth for greater than $2\pi$ rotations.
+
+      $k_z$ has no restrictions aside from being real. This
+      represents the ability
+      for the electron to move unrestrained along the z axis.
+
+    }
+
+    \pagebreak
+
+  \item Give an approximate expression for the corresponding energy
+    eigenvalues.
+
+    Note: in cylindrical polar coordinates
+
+    \begin{equation*}
+      \nabla^2 = \frac{1}{r}\frac{\delta}{\delta
+      r}\left(r\frac{\delta}{\delta r}\right) +
+      \frac{1}{r^2}\frac{\delta^2}{\delta\phi^2} +
+      \frac{\delta^2}{\delta z^2} \\
+    \end{equation*}
+
+    \boxedanswer{
+      \begin{align*}
+        -\frac{\hbar^2}{2m_e}\nabla^2 \Psi &= E \Psi \\
+        E \Psi &= -\frac{\hbar^2}{2m_e}\nabla^2\left[\sin\frac{n\pi(r -
+        r_0)}{L_r}\exp(im\phi)\exp(ik_zz) \right] \\
+        &
+        \begin{aligned}
+          \nabla^2 &=
+          \frac{1}{r}\frac{\delta}{\delta
+          r}\left(r\frac{\delta}{\delta r}\right) +
+          \frac{1}{r^2}\frac{\delta^2}{\delta\phi^2} +
+          \frac{\delta^2}{\delta z^2}
+        \end{aligned} \\
+        \Aboxed{E_{n,m,k} &\approx
+          \frac{\hbar^2}{2m_e}\left[\left(\frac{n\pi}{L_r}\right)^2 +
+        \frac{m^2}{r_0^2} + k_z^2\right]}
+      \end{align*}
     }
 
 \end{enumerate}
